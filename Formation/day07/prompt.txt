@@ -1,0 +1,6 @@
+Given a string, return true if the letters can be re-arranged to make a palindrome using every letter. Otherwise, return false.
+
+function isPalindromeAnagram(word) {
+  /* your code here */
+}
+
