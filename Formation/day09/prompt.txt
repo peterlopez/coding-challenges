@@ -1,0 +1,4 @@
+Implement binary search on an array. Return the index of the value if found and -1 otherwise.
+function binarySearch(data, k) {
+  /* your code here */
+}
