@@ -8,6 +8,7 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${file}",
       "cwd": "${fileDirname}",
+      "runtimeExecutable": "/opt/homebrew/bin/node",
       "outFiles": []
     }
   ]
