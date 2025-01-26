@@ -1,0 +1,4 @@
+Implement merge sort on an array.
+function mergeSort(data) {
+  /* your code here */
+}
