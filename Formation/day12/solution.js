@@ -7,21 +7,41 @@ class LLNode {
 }
 
 function flattenSublist(head) {
-  const output = [];
+  function iterative(head) {
+    const output = [];
 
-  while (head) {
-    output.push(head.value);
+    while (head) {
+      output.push(head.value);
 
-    let sublistNode = head.sublist;
-    while (sublistNode) {
-      output.push(sublistNode.value);
-      sublistNode = sublistNode.next;
+      let sublistNode = head.sublist;
+      while (sublistNode) {
+        output.push(sublistNode.value);
+        sublistNode = sublistNode.next;
+      }
+
+      head = head.next;
     }
 
-    head = head.next;
+    return output;
   }
 
-  return output;
+  const iterativeOutput = iterative(head);
+
+  const recursiveOutput = [];
+  function recursive(head) {
+    if (!head) return;
+    recursiveOutput.push(head.value);
+    recursive(head.sublist);
+    recursive(head.next);
+  }
+
+  recursive(head);
+
+  console.assert(
+    JSON.stringify(iterativeOutput) == JSON.stringify(recursiveOutput)
+  );
+
+  return iterativeOutput;
 }
 
 const head = new LLNode(
