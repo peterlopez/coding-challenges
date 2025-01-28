@@ -6,19 +6,13 @@ class TreeNode {
   }
 }
 
-function treeHeight(root, h = 1) {
-  if (!root.left && !root.right) return h;
-  let leftHeight = h;
-  let rightHeight = h;
+function treeHeight(root) {
+  if (!root) return 0;
 
-  if (root.left) {
-    leftHeight = treeHeight(root.left, h + 1);
-  }
-  if (root.right) {
-    rightHeight = treeHeight(root.right, h + 1);
-  }
+  const leftHeight = treeHeight(root.left);
+  const rightHeight = treeHeight(root.right);
 
-  return Math.max(leftHeight, rightHeight);
+  return 1 + Math.max(leftHeight, rightHeight);
 }
 
 const root = new TreeNode(
