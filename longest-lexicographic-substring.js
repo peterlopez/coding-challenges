@@ -14,6 +14,10 @@ function longestLexicographicSubstring(str) {
     return 1;
   }
 
+  if (str[str.length - 1] > str[0]) {
+    return str.length;
+  }
+
   let l = 0;
   let r = 1;
   // find optimal right pointer
@@ -41,3 +45,5 @@ console.assert(longestLexicographicSubstring("aaaaaa") === 1);
 console.assert(longestLexicographicSubstring("a") === 1);
 
 console.assert(longestLexicographicSubstring("") === 0);
+
+console.assert(longestLexicographicSubstring("abcaadefz") === 9);
