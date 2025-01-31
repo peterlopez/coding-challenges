@@ -1,0 +1,4 @@
+Given an N*N board, place N queens on the board such that none can attack each other. A queen can move an unlimited number of spaces in any direction: horizontal, vertical, or diagonal. Return an N*N matrix of ‘.’ and ‘Q’ characters, a ‘Q’ where ever a queen is positioned.
+function nQueens(n) {
+  /* your code here */
+}
