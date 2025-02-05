@@ -51,3 +51,21 @@ const expectedOutput = [
 console.assert(
   JSON.stringify(setMatrixZeros(input)) === JSON.stringify(expectedOutput)
 );
+
+// prettier-ignore
+const input2 = [
+  [0, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+// prettier-ignore
+const expectedOutput2 = [
+  [0, 0, 0],
+  [0, 5, 6],
+  [0, 8, 9],
+];
+
+console.assert(
+  JSON.stringify(setMatrixZeros(input2) === JSON.stringify(expectedOutput2))
+);
